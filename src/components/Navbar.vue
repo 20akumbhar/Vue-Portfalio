@@ -9,10 +9,18 @@
     </div>
     <div class="opt" v-bind:class="{ton : active}">
       <ul>
-        <li class="active">Home</li>
-        <li>About</li>
-        <li>Services</li>
-        <li>Contact</li>
+        <li>
+          <router-link to="/about">Contact</router-link>
+        </li>
+        <li>
+          <router-link to="/">Services</router-link>
+        </li>
+        <li>
+          <router-link to="/about">About</router-link>
+        </li>
+        <li class="active">
+          <router-link to="/">Home</router-link>
+        </li>
       </ul>
     </div>
   </nav>
@@ -66,11 +74,17 @@ nav .opt {
 nav .opt ul {
   list-style: none;
 }
+
 nav .opt ul li {
   float: right;
+}
+nav .opt ul li a {
+  color: inherit;
+  text-decoration: none;
   padding: 10px 20px;
 }
-nav .opt ul li.active,nav .opt ul li:hover{
+nav .opt ul li a.router-link-exact-active,
+nav .opt ul li a:hover {
   border-bottom: 1px solid #ffc857;
 }
 @media only screen and (max-width: 600px) {
@@ -105,6 +119,10 @@ nav .opt ul li.active,nav .opt ul li:hover{
     display: block;
     padding: 30px;
     text-align: center;
+  }
+  nav .opt ul li a {
+    color: inherit;
+    text-decoration: none;
   }
 }
 </style>

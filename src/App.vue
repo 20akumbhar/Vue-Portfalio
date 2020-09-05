@@ -1,27 +1,11 @@
 <template>
   <div id="app">
-    <Navbar />
-    <br />
-    <br />
-    <home/>
+    <Navbar/>
+    
+    <router-view/>
     <Icons/>
   </div>
 </template>
-
-<script>
-import Navbar from "./components/Navbar.vue";
-import Home from "./components/Home.vue";
-import Icons from "./components/Icons.vue";
-
-export default {
-  name: "App",
-  components: {
-    Navbar,
-    Home,
-    Icons
-  },
-};
-</script>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -57,3 +41,16 @@ body {
 }
 
 </style>
+
+<script>
+import Navbar from './components/Navbar';
+import Icons from './components/Icons';
+
+export default {
+  name: "App",
+  components: {
+    Navbar,
+    Icons
+  },
+}
+</script>
