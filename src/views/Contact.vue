@@ -4,20 +4,22 @@
     <div class="card">
       <form @submit="send">
         <div class="name">
-          <input id="name" type="text" placeholder="Name" v-model="name" required/>
+          <input id="name" type="text" placeholder="Name" v-model="name" required />
         </div>
         <div class="email">
-          <input id="email" placeholder="Email Address" type="email" v-model="email" required/>
+          <input id="email" placeholder="Email Address" type="email" v-model="email" required />
         </div>
         <div class="msg">
           <textarea rows="10" placeholder="Enter Message here.." v-model="msg" required></textarea>
         </div>
         <button>Send</button>
       </form>
+      <small>Having Problem , Please send a mail to me at <strong>20akumbhar@gmail.com</strong></small>
     </div>
   </div>
 </template>
 <script>
+const axios = require("axios");
 export default {
   data: function () {
     return {
@@ -27,8 +29,18 @@ export default {
     };
   },
   methods: {
-    send(e) {
+    async send(e) {
       e.preventDefault();
+      let url =
+        "https://us-central1-ajinkya-kumbhar.cloudfunctions.net/addMessage?name=" +
+        this.name +
+        "&email=" +
+        this.email +
+        "&msg=" +
+        this.msg;
+      const data  = await axios.get(url);
+      //this.data = data;
+      console.log(data);
       console.log(this.name);
     },
   },

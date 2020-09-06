@@ -7,15 +7,24 @@
         <small><em>Developer</em></small>
         <br>
         <br>
-        <button class="btn1">
+        <button class="btn1" onclick='window.open("https://firebasestorage.googleapis.com/v0/b/ajinkya-kumbhar.appspot.com/o/Resume-2.pdf?alt=media&token=c0f11f00-f8b0-42bf-b580-69bf23503f64");'>
             Download CV
         </button>
-        <button class="btn2">
+        <button class="btn2" v-on:click="contact">
             Contact Me
         </button>
     </div>
   </div>
 </template>
+<script>
+export default {
+    methods:{
+        contact(){
+            this.$router.push('/contact');
+        }
+    }
+}
+</script>
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap');
 .home {

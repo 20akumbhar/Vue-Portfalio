@@ -1,22 +1,22 @@
 <template>
   <div class="icons">
-    <div class="icon">
+    <div class="icon" onclick="window.open('https://github.com/20akumbhar');">
       <div class="name">Github</div>
       <img src="@/assets/github.svg" alt />
     </div>
-    <div class="icon">
+    <div class="icon" onclick="window.open('https://www.instagram.com/ajinkyakumbhar20');">
       <div class="name">Instagram</div>
       <img src="@/assets/instagram.svg" alt />
     </div>
-    <div class="icon">
+    <div class="icon" onclick="window.open('https://www.linkedin.com/in/ajinkya-k');">
       <div class="name">LinkedIn</div>
       <img src="@/assets/linkedin.svg" alt />
     </div>
-    <div class="icon">
+    <div class="icon" onclick="window.open('//wa.me/918668653283');">
       <div class="name">Whatsapp</div>
       <img src="@/assets/whatsapp.svg" alt />
     </div>
-    <div class="icon">
+    <div class="icon" onclick="window.open('//www.20akumbhar.blogspot.com');">
       <div class="name">Blogger</div>
       <img src="@/assets/blogger.svg" alt />
     </div>

@@ -11,7 +11,7 @@
           <strong> Ajinkya Santosh Kumbhar</strong>.
           <br>
           To know all about me, <br>
-          <button>Get CV</button>
+          <button onclick='window.open("https://firebasestorage.googleapis.com/v0/b/ajinkya-kumbhar.appspot.com/o/Resume-2.pdf?alt=media&token=c0f11f00-f8b0-42bf-b580-69bf23503f64");'>Get CV</button>
       </div>
       <div class="img">
         <img src="@/assets/code.svg" alt="">
