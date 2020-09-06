@@ -6,7 +6,9 @@
     <div class="data">
       <div class="info">
         Hello, <br>
-          My name is <strong> Ajinkya Santosh Kumbhar</strong>.
+          My name is 
+          <br>
+          <strong> Ajinkya Santosh Kumbhar</strong>.
           <br>
           To know all about me, <br>
           <button>Get CV</button>
@@ -49,7 +51,6 @@ color: #2c5364;
   padding: 40px;
 }
 .about .data .img img{
-  min-width: 300px;
   width: 100%;
   height: auto;
   max-width: 600px;

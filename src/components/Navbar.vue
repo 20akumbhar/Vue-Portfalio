@@ -9,17 +9,17 @@
     </div>
     <div class="opt" v-bind:class="{ton : active}">
       <ul>
-        <li>
-          <router-link to="/about">Contact</router-link>
+        <li  v-on:click="close">
+          <router-link to="/contact">Contact</router-link>
         </li>
-        <li>
-          <router-link to="/">Services</router-link>
+        <li v-on:click="close">
+          <router-link to="/services" >Services</router-link>
         </li>
-        <li>
-          <router-link to="/about">About</router-link>
+        <li v-on:click="close">
+          <router-link to="/about" >About</router-link>
         </li>
-        <li class="active">
-          <router-link to="/">Home</router-link>
+        <li v-on:click="close">
+          <router-link to="/" >Home</router-link>
         </li>
       </ul>
     </div>
@@ -36,6 +36,9 @@ export default {
     toggle() {
       this.active = !this.active;
     },
+    close() {
+      this.active = false;
+    },
   },
 };
 </script>
@@ -43,6 +46,7 @@ export default {
 
 <style scoped>
 nav {
+  z-index: 9999;
   position: fixed;
   top: 0;
   height: 60px;
